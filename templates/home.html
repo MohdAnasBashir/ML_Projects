@@ -4,6 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Exam Performance Indicator</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1{
+    color:white;
+    font-size:42px;
+    margin-bottom:25px;
+    text-align:center;
+    text-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+form{
+    width:500px;
+    max-width:95%;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.3);
+    box-shadow:0 25px 45px rgba(0,0,0,.25);
+}
+
+legend h2{
+    color:white;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+label{
+    color:white;
+    font-weight:500;
+}
+
+select,
+input[type="number"]{
+    width:100%;
+    margin-top:8px;
+    padding:14px 18px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    background:rgba(255,255,255,.9);
+    transition:.35s;
+}
+
+select:hover,
+input:hover{
+    transform:translateY(-2px);
+}
+
+select:focus,
+input:focus{
+    transform:scale(1.02);
+    box-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+input[type="submit"]{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+input[type="submit"]:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 15px 30px rgba(221,36,118,.5);
+}
+
+input[type="submit"]:active{
+    transform:scale(.98);
+}
+
+h2:last-child{
+    margin-top:25px;
+    color:white;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    padding:18px 35px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    text-align:center;
+}
+
+</style>
 </head>
 <body>
 
