@@ -47,8 +47,53 @@ class ModelTrainer:
                 "AdaBoostRegressor":AdaBoostRegressor(),
                 "GradientBoostRegressor ":GradientBoostingRegressor()
             }
+            params = {
 
-            model_report:dict=evaluate_model(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models)
+                "LinearRegression": {},
+
+                "Lasso": {
+                    "alpha": [0.01, 0.1, 1]
+                },
+
+                "Ridge": {
+                    "alpha": [0.01, 0.1, 1]
+                },
+
+                "K-Neighbors Regressor": {
+                    "n_neighbors": [3, 5, 7],
+                    "weights": ["uniform", "distance"]
+                },
+
+                "Decision Tree": {
+                    "max_depth": [None, 5, 10],
+                    "min_samples_split": [2, 5]
+                },
+
+                "RandomForestRegressor": {
+                    "n_estimators": [100, 200],
+                    "max_depth": [None, 10, 20]
+                },
+
+                "XGBRegressor": {
+                    "n_estimators": [100, 200],
+                    "learning_rate": [0.05, 0.1],
+                    "max_depth": [3, 5]
+                },
+
+                "AdaBoostRegressor": {
+                    "n_estimators": [50, 100],
+                    "learning_rate": [0.05, 0.1]
+                },
+
+                "GradientBoostRegressor": {
+                    "n_estimators": [100, 200],
+                    "learning_rate": [0.05, 0.1],
+                    "max_depth": [3, 5]
+                }
+
+            }
+
+            model_report:dict=evaluate_model(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models,params=params)
 
            ##now we need to  select the best score from the dictionary
             best_model_score = max(model_report.values())
