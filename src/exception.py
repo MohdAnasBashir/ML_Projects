@@ -1,6 +1,5 @@
 ##Imports Python's sys module.
 import sys
-import logging
 #function named error_message_details.
 #It accepts:
 #error → the actual exception (e.g., ZeroDivisionError)
